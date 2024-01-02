@@ -1,3 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: #ffffff;
+    height: 100vh;
+    color: #000;
+}
 
 .container {
     padding: 0 8.4rem;
