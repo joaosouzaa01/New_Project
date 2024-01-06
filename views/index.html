@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu portfólio</title>
-
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../public/css/style.css">
 
 </head>
@@ -24,15 +24,15 @@
             </label>
     
             <ul>
-                <li><a href="#" class="active" style="--navAni:1--"></a>Home</li>
-                <li><a href="#" style="--navAni:2--"></a>Sobre</li>
-                <li><a href="#" style="--navAni:3--"></a>Linguagens</li>
-                <li><a href="#" style="--navAni:4--"></a>Projetos</li>
-                <li><a href="#" style="--navAni:5--"></a>Contato</li>
+                <li><a href="#" class="active" style="--navAni:1--">Home</a></li>
+                <li><a href="#" style="--navAni:2--">Sobre</a></li>
+                <li><a href="#" style="--navAni:3--">Linguagens</a></li>
+                <li><a href="#" style="--navAni:4--">Projetos</a></li>
+                <li><a href="#" style="--navAni:5--">Contato</a></li>
             </ul>
 
             <label class="mode">
-                <input type="checkbox" id="darkModeToggle">]
+                <input type="checkbox" id="darkModeToggle">
                 <i class="bx bxs-moon"></i>
             </label>
             
@@ -41,20 +41,18 @@
 
     <section class="container">
         <div class="main">
-            <divc class="images">
-                <img src="../img/itadoriyuji.JPG" alt="Imagem 1" class="img-w">
-                    <span class="bg-effect-1">
-                        <span class="bg-effect-1"></span>
+            <div class="images">
+                <img src="../img/itadoriyuji.JPG" alt="" class="img-w">
+                <span class="bg-effect-1">
+                <span class="bg-effect-1"></span>
 
-                        </span>
+                </span>
             </div>
             <div class="detail">
-                <h3>Olá! Eu sou</h3>
-                <h1><span style="color: f9532d;">João</span>Victor</h1>
-                <p>Sou um desenvolvedor Web profissional. Meu principal objetivo é ajudar e satisfazer os clientes locais e globais,
-                    soluções e desenvolvimento web
-                </p>
-
+                <h3>Hi, I'm</h3>
+                <h1><span style="color:#f9532d;">João</span>Victor</h1> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In inventore iure at consectetur sed, alias dicta? Nostrum consequatur ipsum placeat odio! Illo eveniet veniam nostrum iure quisquam suscipit assumenda amet.
+                </p>  
                 <div class="social">
                     <a href="https://www.linkedin.com/in/vikash-web-dev/" style="--socialAni:1"><i class='bx bxl-linkedin'></i></a>
                     <a href="https://www.instagram.com/web_devs__/" style="--socialAni:2"><i class='bx bxl-instagram'></i></a>
@@ -62,15 +60,28 @@
                     <a href="https://www.youtube.com/@Web_Devs__" style="--socialAni:4"><i class='bx bxl-youtube'></i></a>
                 </div>
             </div>
-
-            </div>
-
         </div>
-        
     </section>
 
-    
-    <link href="../public/js/script.js">
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
 
 </body>
+
 </html>
